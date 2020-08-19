@@ -17,7 +17,7 @@ def get_number(instruction):
 
         try:
             number = int(input(instruction))
-            break   
+            break
         except ValueError:
             print("Not a number")
     return number
@@ -26,8 +26,10 @@ def get_number(instruction):
 def integer_division(a, b):
     print(a//b)
 
+
 def float_division(a, b):
     print(a/b)
+
 
 a = get_number("input integer for a: ")
 b = get_number("input integer for b: ")

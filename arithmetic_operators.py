@@ -11,15 +11,18 @@ write a program that takes a and b.
 
 
 def get_number(instruction):
-
+    """
+    Function tha gets the number from the user and catches errors.
+    """
     while True:
 
         try:
             number = int(input(instruction))
-            break   
+            break
         except ValueError:
             print("Not a number")
     return number
+
 
 a = get_number("input integer for a: ")
 b = get_number("input integer for b: ")
@@ -29,4 +32,3 @@ print(b)
 print(a + b)
 print(a - b)
 print(a * b)
-

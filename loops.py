@@ -9,9 +9,8 @@ e.g. n = 3 is [0, 1, 2]
 
 """
 
-n = 5
+N = 5
 
-for i in range (n):
-    if i < n:
+for i in range(N):
+    if i < N:
         print(i**2)
-
