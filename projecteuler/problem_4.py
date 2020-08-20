@@ -8,7 +8,7 @@ class FindLargestPalindrome:
         self.number_1 = no_1
         self.number_2 = no_2
         all_combs = self.list_all_combinations(no_1, no_2)
-        str_combs =  self.turn_int_to_string(all_combs)
+        str_combs = self.turn_int_to_string(all_combs)
         palindromes_found = self.list_all_palindromes(str_combs)
         palindromes_to_int = self.turn_str_to_int(palindromes_found)
         print(max(palindromes_to_int))
@@ -16,10 +16,10 @@ class FindLargestPalindrome:
     def list_all_combinations(self, one_number, two_number):
         list_combinations = []
         for i in range(one_number + 1):
-            for n in range (two_number + 1):
+            for n in range(two_number + 1):
                 list_combinations.append(i * n)
         return list_combinations
-    
+
     def turn_int_to_string(self, int_list):
         string_list = []
         for a in int_list:
@@ -42,8 +42,7 @@ class FindLargestPalindrome:
         for p in palindromes_str:
             palindromes_int.append(int(p))
         return palindromes_int
-    
+
 
 if __name__ == '__main__':
     FindLargestPalindrome(999, 999)
-
