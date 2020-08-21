@@ -9,7 +9,7 @@ Approach:
 - take out 1; every integer is evenly divisble by 1 so there is no point in cumputing this.
 - take out 2, 4, 5.  any integer divisible by 20 is also evenly divisble by 2, 4, 5. 
 - So if number % 20 == 0 works, we know for sure that number % 2, 4, 5 works too. 
-- leave 19 in, it's a prime number.
+- leave 19 in, it's a prime number, it says nothing about other numbers.
 - leave 18 in but remove its factors 3 and 6. If it's divisible by 18, it will be for 3 and 6 too.
 - repeat this process and we end up with a pretty short list.
 """
