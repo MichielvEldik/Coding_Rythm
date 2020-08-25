@@ -16,16 +16,18 @@ for i in range(1, 1111):
     for e in range(1, 1111):
         prod_list.append([i**2, e**2])
 
+
 new_list = []
 for a in prod_list:
     if a[0] < a[1]:
         new_list.append(a)
-
+print(new_list)
 a_list = []
+
 for b in new_list:
     if sum(b) % math.sqrt(sum(b)) == 0:
         a_list.append(b)
-
+print(a_list)
 for x in a_list:
     x.append(sum(x))
 
