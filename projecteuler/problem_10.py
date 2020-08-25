@@ -1,10 +1,5 @@
 """
 Find sum of all primes below 2,000,000
-
-1. all primes up to a certain point (efficiently)
-2. sum all of these prime
-
-Sieve of Eratosthenes necessary for optimized generating prime numbers.
 """
 
 
@@ -27,5 +22,3 @@ def sieve(number):
 
 NUMBER = 2_000_000
 sieve(NUMBER)
-
-
