@@ -43,11 +43,13 @@ prod_list = produce_arb_list()
 # Lastly, append sum of the filtered sets and add this sum as
 prod_list = if_sum_sqrt(prod_list)
 
-# take the square root of all numbers in
+# take the square root of all numbers in a list and replace the list entirely
 another_function(prod_list)
 
+# sum a + b + c and append every sub-list with a value 'd' that represents this sum
 sum_function(prod_list)
 
+# find a match for d with 10000
 find_1000(prod_list)
 
 
