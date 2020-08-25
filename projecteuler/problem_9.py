@@ -5,7 +5,12 @@ Pythagoras triplets
 import math
 import numpy
 
+
 prod_list = []
+
+
+
+
 
 for i in range(1, 1111):
     for e in range(1, 1111):
