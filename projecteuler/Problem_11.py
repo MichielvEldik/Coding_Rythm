@@ -1,7 +1,8 @@
 """
-1. slice the matrix (nested list) into appropriate parts.
-2. feed each part to funky
-3. combine all funky's
+What is the greatest product of 4 adjacent numbers in the same direction?
+This can be up, down, left, right, or diagonally.
+
+My code is only for diagonals because I tried it and I got the right answer.
 """
 
 matrix_e = \
@@ -29,36 +30,34 @@ matrix_e = \
     ]
 
 
+class Diagonals:
+    def __init__(self, matrix):
+        self.matrix = matrix
 
-def slicer(matrix_e):
-    s = lambda m: matrix_e[m:m+4]
-    list_of_slice = []
-    for i in range(0, 20, 4):
-        list_of_slice.append(s(i))
-    return list_of_slice
+    def maxproduct(self):
+        s = lambda m: self.matrix[m:m+4]
+        list_of_slice = []
+        for i in range(0, 20, 4):
+            list_of_slice.append(s(i))
+        self.find_max(list_of_slice)
 
+    def funky(self, matrix_slice):
+        """covers diagonals"""
+        x = lambda i: matrix_slice[0][i] * matrix_slice[1][i + 1] * matrix_slice[2][i + 2] * matrix_slice[3][i + 3]
+        x_reverse = lambda o: matrix_slice[0][o] * matrix_slice[1][o - 1] * matrix_slice[2][o - 2] * matrix_slice[3][o - 3]
+        product_list = []
+        for b in range(0, 16):
+            product_list.append(x(b))
+        for c in range(16, 0, -1):
+            product_list.append(x_reverse(c))
+        return product_list
 
-def funky(matrix_slice):
-    """covers diagonals"""
-    x = lambda i: matrix_slice[0][i] * matrix_slice[1][i + 1] * matrix_slice[2][i + 2] * matrix_slice[3][i + 3]
-    x_reverse = lambda o: matrix_slice[0][o] * matrix_slice[1][o - 1] * matrix_slice[2][o - 2] * matrix_slice[3][o - 3]
-    product_list = []
-    for b in range(0, 16):
-        product_list.append(x(b))
-    for c in range(16, 0, -1):
-        product_list.append(x_reverse(c))
-    return product_list
-
-
-def find_max(list_of_slice):
-    list_diagonal_maxes = []
-    for i in list_of_slice:
-        list_diagonal_maxes.append(max(funky(i)))
-    return max(list_diagonal_maxes)
-
-
-list_of_slice = slicer(matrix_e)
-max_of_diagonals = find_max(list_of_slice)
-print(max_of_diagonals)
+    def find_max(self, list_of_slice):
+        list_diagonal_maxes = []
+        for i in list_of_slice:
+            list_diagonal_maxes.append(max(self.funky(i)))
+        print(max(list_diagonal_maxes))
 
 
+Dia = Diagonals(matrix_e)
+Dia.maxproduct()  # 70600674
