@@ -1,6 +1,5 @@
 """
 sum of the even-valued terms in the Fibonnaci sequence up to 4 million.
-
 """
 #
 # Example of a BAD recusrive function.

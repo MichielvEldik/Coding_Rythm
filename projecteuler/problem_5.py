@@ -14,6 +14,8 @@ Approach:
 - repeat this process and we end up with a pretty short list.
 """
 
+# Anything below 20 will never be evenly divisble by 20.
+NUMBER = 20
 
 def isDivisble(number):
     """
@@ -24,10 +26,6 @@ def isDivisble(number):
         if number % i != 0:
             return False
     return True
-
-
-# Anything below 20 will never be evenly divisble by 20.
-NUMBER = 20
 
 
 while True:

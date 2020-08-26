@@ -19,7 +19,7 @@ for digit in STR_NUMBER:
 # create a factor list to loop over during the problem
 factor_list = list(range(0, 13))
 
-# create a placeholder for all products of 13 adjacent valus in the 1000 list
+# create a placeholder for all products of 13 adjacent values in the 1000 list
 answer_list = []
 
 # for every value in the list...
