@@ -27,6 +27,7 @@ def get_number(instruction):
 a = get_number("input integer for a: ")
 b = get_number("input integer for b: ")
 
+print("test")
 print(a)
 print(b)
 print(a + b)
