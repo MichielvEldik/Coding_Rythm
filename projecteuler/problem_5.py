@@ -17,6 +17,7 @@ Approach:
 # Anything below 20 will never be evenly divisble by 20.
 NUMBER = 20
 
+
 def isDivisble(number):
     """
     input: any number

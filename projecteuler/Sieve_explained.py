@@ -54,4 +54,5 @@ def sieve(limit):
 
 
 primes = sieve(2_000_000)
+print(primes)
 print(sum(primes))
