@@ -15,12 +15,11 @@ def tri_gen():
 
 list = []
 for a in tri_gen():
-    if a > 99999999:
+    if a > 99988799:
         break
     list.append(a)
 
 print(list[-1])
-
 
 
 
@@ -72,6 +71,6 @@ primes = sieve(1_000_000)
 
 
 lijssie = []
-print(rec_2(99991011, lijssie, 0))
+print(rec_2(76_576_500, lijssie, 0))
 print(lijssie)
 counter(lijssie)
