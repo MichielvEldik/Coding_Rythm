@@ -1,2 +1,4 @@
 # Coding_Challenges
-Doing small coding tasks to (re)sharpen the Python basics or learn new stuff.
+Mostly ProjectEuler for now, but will get started on data structures and algorithms from HackerRank some time soon.
+In these challenges, it's not my only goal to get the right answer. 
+It's also a goal to learn something new about Python and be open to implementing things in a way that is foreign to me.
