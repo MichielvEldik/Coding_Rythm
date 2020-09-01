@@ -18,6 +18,7 @@ start = time.time()
 
 
 class TriangleNumbersList:
+    """ Generate triangle numbers"""
     def __init__(self, limit):
         self.limit = limit
         self.list = []
@@ -36,6 +37,7 @@ class TriangleNumbersList:
 
 
 def sieve(limit):
+    """ Generate prime numbers"""
     max_number_to_be_checked = int(math.sqrt(limit))
     nummies = [x for x in range(2, limit + 1)]
     for n in nummies:
@@ -50,25 +52,18 @@ def sieve(limit):
 
 
 def return_by_two_three(numbers_list):
+    """ filter out numbers that can't divide by the first few prime numbers."""
     return [e for e in numbers_list if e % 2 == 0 and e % 3 == 0 and e % 5 == 0 and e % 7 == 0 and e % 11 == 0]
 
 
 def counter(lijssie):
-    """
-
-
-    """
-    nieuw_lijssie = []
-    for i in lijssie[-1]:
-        nieuw_lijssie.append(i)
+    """ Count divisors with prime factorization trick"""
     lissa = [x[1] for x in lijssie]
     lissa.append(lijssie[-1][0])
-    set_list = set(lissa)
     count_list = []
-    for i in set_list:
+    for i in set(lissa):
         count_list.append(lissa.count(i) + 1)
-    hoi = numpy.prod(count_list)
-    return hoi
+    return numpy.prod(count_list)
 
 
 def rec_2(NUMMY, lijssie, count):
@@ -115,7 +110,7 @@ def rec_2(NUMMY, lijssie, count):
 primes = sieve(10000)
 
 # list triangle numbers up to an arbitrarily large
-tri_list = TriangleNumbersList(100_000_000_000_000).list
+tri_list = TriangleNumbersList(100_000_000).list
 even_tri_list = return_by_two_three(tri_list)
 
 # empty list that will hold nodes temporarily

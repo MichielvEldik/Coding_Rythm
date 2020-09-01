@@ -42,17 +42,12 @@ def return_by_two_three(numbers_list):
 
 
 def counter(lijssie):
-    nieuw_lijssie = []
-    for i in lijssie[-1]:
-        nieuw_lijssie.append(i)
     lissa = [x[1] for x in lijssie]
     lissa.append(lijssie[-1][0])
-    set_list = set(lissa)
     count_list = []
-    for i in set_list:
+    for i in set(lissa):
         count_list.append(lissa.count(i) + 1)
-    hoi = numpy.prod(count_list)
-    return hoi
+    return numpy.prod(count_list)
 
 
 def rec_2(NUMMY, lijssie, count):
@@ -76,7 +71,7 @@ def rec_2(NUMMY, lijssie, count):
 
 primes = sieve(10000)
 
-tri_list = TriangleNumbersList(100_000_000_000_000).list
+tri_list = TriangleNumbersList(100_000_000).list
 even_tri_list = return_by_two_three(tri_list)
 
 lijssie = []
